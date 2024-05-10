@@ -1005,6 +1005,7 @@ li{
     /* Add the following CSS to change the background color on hover */
     .navbar .nav-links a:hover {
         background-color: white;
+        color: black;
     }
   
     .logo img {
