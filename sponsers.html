@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sponsers</title>
+    <link rel="shortcut icon" href="./images/favicon_io/android-chrome-512x512.png" type="image/x-icon">
+    <link rel="stylesheet" href="sponsers.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="big">
+            <header class="header">
+                <a href="index.html" class="logo"><img src="./images/icon-white-removebg-preview.png"></a>
+
+                <nav class="navbar">
+                    <div class="nav-links">
+                        <a href="index.html" class="active">Home</a>
+                        <a href="aboutus.html">About&nbsp;Us</a>
+                        <a href="sponsers.html">Sponsors</a>
+                        <a href="speakers.html">Speakers</a>
+                        <a href="schedule.html">Schedule</a>
+                        <a href="sponsorus1.html">Sponsor&nbsp;Us</a>
+                        <div class="dropdown1">
+                            <button class="dropbtn1">More</button>
+                            <div class="dropdown-content1">
+                                <a href="#" target="_blank">First</a>
+                                <a href="#" target="_blank">Second</a>
+                                <a href="ourteam1.html" target="_blank">Our Team</a>
+                                <a href="faq.html" target="_blank">FAQ</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-icon" onclick="toggleMenu()">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                </nav>
+            </header>
+            <h1 class="title">Our Sponsors</h1>
+            <div class="content">
+                <div class="container">
+                    <!-- Sponsor Cards -->
+                    <div class="card">
+                        <img src="acmlogo-removebg-preview.png" alt="Sponsor 1">
+                        <h3>Sponsor 1</h3>
+                        <p class="content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam laborum iure earum expedita aperiam ipsam necessitatibus quos placeat perferendis possimus, nostrum sed odio distinctio, voluptatem amet maxime, at exercitationem veniam.</p>
+                        <p class="show-more">Show more</p>
+                    </div>
+                    <div class="card">
+                        <img src="cyberlab.png" alt="Sponsor 2">
+                        <h3>Sponsor 2</h3>
+                        <p class="content-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p class="show-more">Show more</p>
+                    </div>
+                    <div class="card">
+                        <img src="acmlogo-removebg-preview.png" alt="Sponsor 3">
+                        <h3>Sponsor 3</h3>
+                        <p class="content-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p class="show-more">Show more</p>
+                    </div>
+                    <div class="card">
+                        <img src="cyberlab.png" alt="Sponsor 4">
+                        <h3>Sponsor 4</h3>
+                        <p class="content-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p class="show-more">Show more</p>
+                    </div>
+                    <div class="card">
+                        <img src="acmlogo-removebg-preview.png" alt="Sponsor 5">
+                        <h3>Sponsor 5</h3>
+                        <p class="content-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p class="show-more">Show more</p>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <div class="social-media">
+                    <a href="https://www.facebook.com/iiitkottayamofficial/" target="_blank"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/IIITKKottayam" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/yourpage" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/iiit-kottayam" target="_blank"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.youtube.com/channel/UC3jrKDXjl7_c5bld5x8C1vw" target="_blank"><i
+                            class="fab fa-youtube"></i></a>
+                </div>
+
+                <div class="details">
+                    <div class="email">csyclub@iiitkottayam.ac.in</div>
+                    <p>Copyright &copy; 2024 by Cybersecurity | All Rights Reserved</p>
+
+                </div>
+
+
+                <div class="reach">
+                    <i class="fas fa-map-marker-alt" style="margin-right: 5px;"></i>
+                    <a href="https://www.iiitkottayam.ac.in/#!/reach" target="_blank"
+                        style="color: white;">Reach IIIT Kottayam</a>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        const cards = document.querySelectorAll('.card');
+        cards.forEach(card => {
+            card.addEventListener('mouseover', () => {
+                card.style.transform = 'scale(1.15)';
+            });
+            card.addEventListener('mouseout', () => {
+                card.style.transform = 'scale(1)';
+            });
+        });
+
+        document.querySelectorAll('.show-more').forEach((item) => {
+    item.addEventListener('click', (event) => {
+        const content = event.target.previousElementSibling;
+        const maxHeight = content.scrollHeight;
+
+        if (content.style.maxHeight) {
+            content.style.maxHeight = null;
+            event.target.textContent = 'Show more';
+        } else {
+            content.style.maxHeight = maxHeight + 'px';
+            event.target.textContent = 'Show less';
+        }
+    });
+});
+
+    </script>
+</body>
+
+</html>
